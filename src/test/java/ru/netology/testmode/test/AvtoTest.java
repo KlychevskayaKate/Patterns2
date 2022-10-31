@@ -48,7 +48,7 @@ public class AvtoTest {
         $("[data-test-id=password] input").setValue(blockedUser.getPassword());
         $("[data-test-id=action-login] .button__content").click();
         $("[data-test-id=error-notification] .notification__title").shouldBe(visible, exactText("Ошибка"));
-        $("[data-test-id=error-notification] .notification__content").shouldBe(visible, exactText("Ошибка! Неверно указан логин или пароль"));
+        $("[data-test-id=error-notification] .notification__content").shouldBe(visible, exactText("Ошибка! Пользователь заблокирован"));
     }
 
     @Test
